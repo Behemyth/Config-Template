@@ -29,6 +29,7 @@ AllowAllArgumentsOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
 AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
+#  AlignConsecutiveShortCaseStatements - Unused
 AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: None
 AllowShortIfStatementsOnASingleLine: Never
@@ -85,7 +86,7 @@ InsertNewlineAtEOF: true
 InsertTrailingCommas: None
 IntegerLiteralSeparator:
   Binary: -1
-#  BinaryMinDigits - Unused
+  #  BinaryMinDigits - Unused
   Decimal: 3
   DecimalMinDigits: 5
   Hex: 2
@@ -93,6 +94,7 @@ IntegerLiteralSeparator:
 # JavaImportGroups - Unused
 # JavaScriptQuotes - Unused
 # JavaScriptWrapImports - Unused
+KeepEmptyLinesAtEOF: false
 KeepEmptyLinesAtTheStartOfBlocks: false
 LambdaBodyIndentation: Signature
 Language: Cpp
@@ -119,7 +121,7 @@ PackConstructorInitializers: Never
 # PenaltyBreakTemplateDeclaration - Unused
 # PenaltyExcessCharacter - Unused
 # PenaltyIndentedWhitespace - Unused
-PenaltyReturnTypeOnItsOwnLine: 1000
+# PenaltyReturnTypeOnItsOwnLine  - Unused
 PointerAlignment: Left
 QualifierAlignment: Left
 # QualifierOrder: ['inline', 'friend', 'static', 'constexpr', 'restrict', 'type', 'const', 'volatile' ] - Not supported
@@ -127,6 +129,7 @@ QualifierAlignment: Left
 ReferenceAlignment: Left
 ReflowComments: true
 RemoveBracesLLVM: false
+RemoveParentheses: ReturnStatement
 RemoveSemicolon: true
 RequiresClausePosition: OwnLine
 RequiresExpressionIndentation: OuterScope
@@ -144,7 +147,7 @@ SpaceBeforeCaseColon: true
 SpaceBeforeCpp11BracedList: true
 SpaceBeforeCtorInitializerColon: true
 SpaceBeforeInheritanceColon: true
-# SpaceBeforeJsonColon: false - Requires clang-format 17
+SpaceBeforeJsonColon: false
 SpaceBeforeParens: Custom
 SpaceBeforeParensOptions:
   AfterControlStatements: true
@@ -168,7 +171,8 @@ SpacesInContainerLiterals: false
 SpacesInLineCommentPrefix:
   Minimum: 1
   Maximum: -1
-SpacesInParentheses: false
+SpacesInParentheses: Never
+# SpacesInParensOptions: - Unused
 SpacesInSquareBrackets: false
 Standard: Latest
 StatementAttributeLikeMacros: []
