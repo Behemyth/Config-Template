@@ -171,7 +171,7 @@ SpacesInContainerLiterals: false
 SpacesInLineCommentPrefix:
   Minimum: 1
   Maximum: -1
-SpacesInParentheses: Never
+# SpacesInParentheses: Never - Unsupported
 # SpacesInParensOptions: - Unused
 SpacesInSquareBrackets: false
 Standard: Latest
