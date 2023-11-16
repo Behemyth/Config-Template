@@ -94,7 +94,7 @@ IntegerLiteralSeparator:
 # JavaImportGroups - Unused
 # JavaScriptQuotes - Unused
 # JavaScriptWrapImports - Unused
-KeepEmptyLinesAtEOF: false
+# KeepEmptyLinesAtEOF: false - Unsupported Clang 17
 KeepEmptyLinesAtTheStartOfBlocks: false
 LambdaBodyIndentation: Signature
 Language: Cpp
@@ -129,7 +129,7 @@ QualifierAlignment: Left
 ReferenceAlignment: Left
 ReflowComments: true
 RemoveBracesLLVM: false
-RemoveParentheses: ReturnStatement
+# RemoveParentheses: ReturnStatement - Unsupported Clang 17
 RemoveSemicolon: true
 RequiresClausePosition: OwnLine
 RequiresExpressionIndentation: OuterScope
@@ -147,7 +147,7 @@ SpaceBeforeCaseColon: true
 SpaceBeforeCpp11BracedList: true
 SpaceBeforeCtorInitializerColon: true
 SpaceBeforeInheritanceColon: true
-SpaceBeforeJsonColon: false
+# SpaceBeforeJsonColon: false - Unsupported Clang 17
 SpaceBeforeParens: Custom
 SpaceBeforeParensOptions:
   AfterControlStatements: true
@@ -171,7 +171,7 @@ SpacesInContainerLiterals: false
 SpacesInLineCommentPrefix:
   Minimum: 1
   Maximum: -1
-# SpacesInParentheses: Never - Unsupported
+# SpacesInParentheses: Never - Unsupported Clang 17
 # SpacesInParensOptions: - Unused
 SpacesInSquareBrackets: false
 Standard: Latest
