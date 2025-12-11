@@ -1,0 +1,17 @@
+# Copier template configuration
+# https://copier.readthedocs.io/
+
+_min_copier_version: "9.0.0"
+_subdirectory: template
+_answers_file: .copier-answers.yml
+
+# Questions
+use_cmake_presets:
+  type: bool
+  help: "Include CMake presets configuration?"
+  default: true
+
+# Conditional file/folder exclusions based on answers
+_exclude:
+  - "{% if not use_cmake_presets %}CMakePresets.json{% endif %}"
+  - "{% if not use_cmake_presets %}tool/cmake/platform/**{% endif %}"
