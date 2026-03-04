@@ -1,5 +1,5 @@
 {
-    "version": 9,
+    "version": 10,
     "include": [
         "tool/cmake/platform/linux/CMakePresets.json",
         "tool/cmake/platform/mac/CMakePresets.json",
