@@ -81,8 +81,8 @@
 			]
 		},
 		{
-			"name": "linux-ninja-gcc-debug",
-			"displayName": "Ninja GCC Debug",
+			"name": "linux-ninja-gcc-unit-debug",
+			"displayName": "Ninja GCC Unit Debug",
 			"configurePreset": "linux-ninja-gcc",
 			"inherits": [
 				"linux-default"
@@ -90,8 +90,8 @@
 			"configuration": "Debug"
 		},
 		{
-			"name": "linux-ninja-gcc-development",
-			"displayName": "Ninja GCC Development",
+			"name": "linux-ninja-gcc-unit-development",
+			"displayName": "Ninja GCC Unit Development",
 			"configurePreset": "linux-ninja-gcc",
 			"inherits": [
 				"linux-default"
@@ -99,8 +99,8 @@
 			"configuration": "Development"
 		},
 		{
-			"name": "linux-ninja-gcc-release",
-			"displayName": "Ninja GCC Release",
+			"name": "linux-ninja-gcc-unit-release",
+			"displayName": "Ninja GCC Unit Release",
 			"configurePreset": "linux-ninja-gcc",
 			"inherits": [
 				"linux-default"
@@ -108,8 +108,8 @@
 			"configuration": "Release"
 		}{% if use_benchmarks %},
 		{
-			"name": "linux-ninja-gcc-bench-release",
-			"displayName": "Ninja GCC Bench Release",
+			"name": "linux-ninja-gcc-bench",
+			"displayName": "Ninja GCC Bench",
 			"configurePreset": "linux-ninja-gcc",
 			"inherits": [
 				"default-bench",
