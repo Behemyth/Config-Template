@@ -31,6 +31,9 @@
 		{
 			"name": "macos-default",
 			"hidden": true,
+			"inherits": [
+				"default"
+			],
 			"condition": {
 				"type": "equals",
 				"lhs": "${hostSystemName}",
@@ -69,10 +72,6 @@
 		{
 			"name": "macos-default",
 			"hidden": true,
-			"output": {
-				"outputOnFailure": true,
-				"shortProgress": true
-			},
 			"inherits": [
 				"default"
 			]
@@ -103,6 +102,16 @@
 				"macos-default"
 			],
 			"configuration": "Release"
-		}
+		}{% if use_benchmarks %},
+		{
+			"name": "macos-ninja-clang-bench-release",
+			"displayName": "Ninja Clang Bench Release",
+			"configurePreset": "macos-ninja-clang",
+			"inherits": [
+				"default-bench",
+				"macos-default"
+			],
+			"configuration": "Release"
+		}{% endif %}
 	]
 }

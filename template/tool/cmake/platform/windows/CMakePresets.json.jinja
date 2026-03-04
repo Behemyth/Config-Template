@@ -89,6 +89,9 @@
 		{
 			"name": "windows-default",
 			"hidden": true,
+			"inherits": [
+				"default"
+			],
 			"condition": {
 				"type": "equals",
 				"lhs": "${hostSystemName}",
@@ -324,6 +327,46 @@
 				"windows-default"
 			],
 			"configuration": "Release"
-		}
+		}{% if use_benchmarks %},
+		{
+			"name": "windows-ninja-msvc-bench-release",
+			"displayName": "Ninja MSVC Bench Release",
+			"configurePreset": "windows-ninja-msvc",
+			"inherits": [
+				"default-bench",
+				"windows-default"
+			],
+			"configuration": "Release"
+		},
+		{
+			"name": "windows-ninja-clang-bench-release",
+			"displayName": "Ninja Clang Bench Release",
+			"configurePreset": "windows-ninja-clang",
+			"inherits": [
+				"default-bench",
+				"windows-default"
+			],
+			"configuration": "Release"
+		},
+		{
+			"name": "windows-msbuild-msvc-bench-release",
+			"displayName": "MSBuild MSVC Bench Release",
+			"configurePreset": "windows-msbuild-msvc",
+			"inherits": [
+				"default-bench",
+				"windows-default"
+			],
+			"configuration": "Release"
+		},
+		{
+			"name": "windows-msbuild-clang-bench-release",
+			"displayName": "MSBuild Clang Bench Release",
+			"configurePreset": "windows-msbuild-clang",
+			"inherits": [
+				"default-bench",
+				"windows-default"
+			],
+			"configuration": "Release"
+		}{% endif %}
 	]
 }

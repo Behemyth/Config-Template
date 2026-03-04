@@ -11,6 +11,12 @@ use_cmake_presets:
   help: "Include CMake presets configuration?"
   default: true
 
+use_benchmarks:
+  type: bool
+  help: "Include benchmark test presets?"
+  default: false
+  when: "{{ use_cmake_presets }}"
+
 # Conditional file/folder exclusions based on answers
 _exclude:
   - "{% if not use_cmake_presets %}CMakePresets.json{% endif %}"

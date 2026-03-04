@@ -35,6 +35,9 @@
 		{
 			"name": "linux-default",
 			"hidden": true,
+			"inherits": [
+				"default"
+			],
 			"condition": {
 				"type": "equals",
 				"lhs": "${hostSystemName}",
@@ -73,10 +76,6 @@
 		{
 			"name": "linux-default",
 			"hidden": true,
-			"output": {
-				"outputOnFailure": true,
-				"shortProgress": true
-			},
 			"inherits": [
 				"default"
 			]
@@ -107,6 +106,16 @@
 				"linux-default"
 			],
 			"configuration": "Release"
-		}
+		}{% if use_benchmarks %},
+		{
+			"name": "linux-ninja-gcc-bench-release",
+			"displayName": "Ninja GCC Bench Release",
+			"configurePreset": "linux-ninja-gcc",
+			"inherits": [
+				"default-bench",
+				"linux-default"
+			],
+			"configuration": "Release"
+		}{% endif %}
 	]
 }
