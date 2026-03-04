@@ -74,7 +74,12 @@
             "execution": {
                 "noTestsAction": "error",
                 "stopOnFailure": true
-            }
+            }{% if use_benchmarks %},
+            "filter": {
+                "exclude": {
+                    "label": "benchmark"
+                }
+            }{% endif %}
         }{% if use_benchmarks %},
         {
             "name": "default-bench",
