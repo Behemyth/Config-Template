@@ -1,9 +1,22 @@
 # Copier template configuration
 # https://copier.readthedocs.io/
 
-_min_copier_version: "9.0.0"
+_min_copier_version: "9.17.0"
 _subdirectory: template
 _answers_file: .copier-answers.yml
+
+_message_after_copy: |
+  Configuration overlay applied.
+
+  Add project-owned PDM scripts for `config-check` and `config-update`, review
+  the generated diff, and commit the overlay as a separate change.
+
+_message_before_update: |
+  Updating shared configuration. The destination tree must be clean.
+
+_message_after_update: |
+  Shared configuration updated. Review the generated diff and any conflict
+  markers, run project validation, and commit the update separately.
 
 # Questions
 use_cmake_presets:
